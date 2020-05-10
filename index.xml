@@ -12,14 +12,14 @@
     
     
     <item>
-      <title>Sample DotNet Core Api with Serilog, Autofac, Swagger</title>
+      <title>Dotnet Core Api with Serilog, Autofac, Swagger</title>
       <link>https://svaus.github.io/posts/gettingstarteddotnetcoreapi/</link>
       <pubDate>Sun, 10 May 2020 13:06:28 +1000</pubDate>
       
       <guid>https://svaus.github.io/posts/gettingstarteddotnetcoreapi/</guid>
-      <description>Sample DotNet Core Api project with :
+      <description>This blog post we will create a sample DotNet Core Api project with :
  Serilog implementation with various sinks console, file, application insigths Autofac Swagger with ReDoc and Material Design  Tools used  VS Code Aspnet Core 2.2 SDK Azure (For Application Insights only)  dotnet new webapi Add Serilog Logging to project Add below packages to solution/project
-dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console dotnet add package Serilog.Settings.Configuration Modify the Program.cs file as below.</description>
+dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console dotnet add package Serilog.</description>
     </item>
     
     <item>
@@ -32,7 +32,7 @@ dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console d
     </item>
     
     <item>
-      <title>About</title>
+      <title>About Me</title>
       <link>https://svaus.github.io/about/</link>
       <pubDate>Sun, 10 May 2020 12:33:26 +1000</pubDate>
       

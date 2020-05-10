@@ -5,27 +5,27 @@
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Sample DotNet Core Api with Serilog, Autofac, Swagger" />
-<meta property="og:description" content="Sample DotNet Core Api project with :
+<meta property="og:title" content="Dotnet Core Api with Serilog, Autofac, Swagger" />
+<meta property="og:description" content="This blog post we will create a sample DotNet Core Api project with :
  Serilog implementation with various sinks console, file, application insigths Autofac Swagger with ReDoc and Material Design  Tools used  VS Code Aspnet Core 2.2 SDK Azure (For Application Insights only)  dotnet new webapi Add Serilog Logging to project Add below packages to solution/project
-dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console dotnet add package Serilog.Settings.Configuration Modify the Program.cs file as below." />
+dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console dotnet add package Serilog." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://svaus.github.io/posts/gettingstarteddotnetcoreapi/" />
 <meta property="article:published_time" content="2020-05-10T13:06:28+10:00" />
 <meta property="article:modified_time" content="2020-05-10T13:06:28+10:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Sample DotNet Core Api with Serilog, Autofac, Swagger"/>
-<meta name="twitter:description" content="Sample DotNet Core Api project with :
+<meta name="twitter:title" content="Dotnet Core Api with Serilog, Autofac, Swagger"/>
+<meta name="twitter:description" content="This blog post we will create a sample DotNet Core Api project with :
  Serilog implementation with various sinks console, file, application insigths Autofac Swagger with ReDoc and Material Design  Tools used  VS Code Aspnet Core 2.2 SDK Azure (For Application Insights only)  dotnet new webapi Add Serilog Logging to project Add below packages to solution/project
-dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console dotnet add package Serilog.Settings.Configuration Modify the Program.cs file as below."/>
+dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console dotnet add package Serilog."/>
 
 
     <meta name="description" content="">
     <link rel="canonical" href="https://svaus.github.io/posts/gettingstarteddotnetcoreapi/">
 
     
-    <title>Sample DotNet Core Api with Serilog, Autofac, Swagger &middot; Go Code</title>
+    <title>Dotnet Core Api with Serilog, Autofac, Swagger &middot; Go Code</title>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -87,7 +87,7 @@ dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console d
     
     <section class="row">
         <div class="col s12 m10 offset-m1 l10 offset-l1">
-            <h1>Sample DotNet Core Api with Serilog, Autofac, Swagger</h1>
+            <h1>Dotnet Core Api with Serilog, Autofac, Swagger</h1>
         </div>
     </section>
 
@@ -108,18 +108,18 @@ dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console d
 </p>
         </div>
         <div class="col s12 m8 offset-m2 l6">
-            <p>Sample DotNet Core Api project with :</p>
-<ul>
+            <p>This blog post we will create a sample DotNet Core Api project with :</p>
+<ol>
 <li>Serilog implementation with various sinks console, file, application insigths</li>
 <li>Autofac</li>
 <li>Swagger with ReDoc and Material Design</li>
-</ul>
+</ol>
 <h2 id="tools-used">Tools used</h2>
-<ul>
+<ol>
 <li>VS Code</li>
 <li>Aspnet Core 2.2 SDK</li>
 <li>Azure (For Application Insights only)</li>
-</ul>
+</ol>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">dotnet new webapi
 </code></pre></div><h2 id="add-serilog-logging-to-project">Add Serilog Logging to project</h2>
 <p>Add below packages to solution/project</p>
@@ -162,7 +162,7 @@ dotnet add package Serilog.Settings.Configuration
         <span style="color:#e6db74">&#34;Name&#34;</span>: <span style="color:#e6db74">&#34;RollingFile&#34;</span>,
           <span style="color:#e6db74">&#34;Args&#34;</span>: {
           <span style="color:#e6db74">&#34;pathFormat&#34;</span>: <span style="color:#e6db74">&#34;logs\\log-{Date}.txt&#34;</span>,
-          <span style="color:#e6db74">&#34;outputTemplate&#34;</span>: <span style="color:#e6db74">&#34;{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level}] {Message}{NewLine}{Exception}&#34;</span>
+          <span style="color:#e6db74">&#34;outputTemplate&#34;</span>: <span style="color:#e6db74">&#34;{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level}] {Message}{NewLine}{Exception}&#34;</span>,
           }
         }
       ],
