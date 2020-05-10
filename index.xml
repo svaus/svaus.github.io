@@ -12,6 +12,17 @@
     
     
     <item>
+      <title>Docker azure pipeline build agent</title>
+      <link>https://svaus.github.io/posts/dockerazpbuildagent/</link>
+      <pubDate>Sun, 10 May 2020 16:08:37 +1000</pubDate>
+      
+      <guid>https://svaus.github.io/posts/dockerazpbuildagent/</guid>
+      <description>Creating a docker build agent for azure pipeline is very easy. There are few simple steps. We will be using chocoletey to create this agent.
+Firstly create a Dockerfile where we can provide docker instructions. In this case I am using windows core 2019 image, but you can use any other images.
+FROMmcr.microsoft.com/windows/servercore:ltsc2019SHELL [&amp;#34;powershell&amp;#34;, &amp;#34;-Command&amp;#34;, &amp;#34;$ErrorActionPreference = &amp;#39;Stop&amp;#39;; $ProgressPreference = &amp;#39;SilentlyContinue&amp;#39;;&amp;#34;]WORKDIR/azpCOPY InstallChoco.ps1 .RUN .\InstallChoco.ps1 COPY InstallDotNetCoreSdkChoco.ps1 .RUN .\InstallDotNetCoreSdkChoco.ps1COPY start.ps1 .CMD powershell .</description>
+    </item>
+    
+    <item>
       <title>Job scheduler with dotnet core</title>
       <link>https://svaus.github.io/posts/jobschedulerwithdotnetcore/</link>
       <pubDate>Sun, 10 May 2020 15:54:26 +1000</pubDate>
