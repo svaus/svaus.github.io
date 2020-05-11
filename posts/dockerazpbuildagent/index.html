@@ -123,8 +123,86 @@ FROMmcr.microsoft.com/windows/servercore:ltsc2019SHELL [&#34;powershell&#34;, &#
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">COPY</span> start.ps1 .<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">CMD</span> powershell .<span style="color:#ae81ff">\s</span>tart.ps1<span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010">
-</span></code></pre></div><p>Let us add the powershell scripts. Note that you can get latest powershell from microsoft docs.</p>
-<p>Create a new file named <code>InstallChoco.ps1</code>. This will be used to install choco in the docker images</p>
+</span></code></pre></div><ol>
+<li>Start from a base image it could be ltsc2019 or ltsc2016 or ubuntu image.</li>
+<li>Set Powershll as the shell command</li>
+<li>Set WORKDIR - working directory to azp or something of your choice</li>
+<li>Copy and run 3 powershell scripts <code>InstallChoco.ps1</code> , <code>InstallDotNetCoreSdkChoco.ps1</code> and <code>start.ps1</code> using the COPY and RUN instruction of Dockerfile</li>
+</ol>
+<p>Let us add the powershell scripts. Note that you can get latest powershell from microsoft docs <a href="https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/docker?view=azure-devops">https://docs.microsoft.com/en-us/azure/devops/pipelines/agents/docker?view=azure-devops</a>.</p>
+<p>Save the below content to <code>start.ps1</code> file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Powershell" data-lang="Powershell"><span style="color:#66d9ef">if</span> (<span style="color:#f92672">-not</span> (Test-Path Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_URL)) {
+  Write-Error <span style="color:#e6db74">&#34;error: missing AZP_URL environment variable&#34;</span>
+  exit 1
+}
+
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">-not</span> (Test-Path Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_TOKEN_FILE)) {
+  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">-not</span> (Test-Path Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_TOKEN)) {
+    Write-Error <span style="color:#e6db74">&#34;error: missing AZP_TOKEN environment variable&#34;</span>
+    exit 1
+  }
+
+  $Env:AZP_TOKEN_FILE = <span style="color:#e6db74">&#34;\azp\.token&#34;</span>
+  $Env:AZP_TOKEN | Out-File -FilePath $Env:AZP_TOKEN_FILE
+}
+
+Remove-Item Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_TOKEN
+
+<span style="color:#66d9ef">if</span> ($Env:AZP_WORK <span style="color:#f92672">-and</span> <span style="color:#f92672">-not</span> (Test-Path Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_WORK)) {
+  New-Item $Env:AZP_WORK -ItemType directory | Out-Null
+}
+
+New-Item <span style="color:#e6db74">&#34;\azp\agent&#34;</span> -ItemType directory | Out-Null
+
+<span style="color:#75715e"># Let the agent ignore the token env variables</span>
+$Env:VSO_AGENT_IGNORE = <span style="color:#e6db74">&#34;AZP_TOKEN,AZP_TOKEN_FILE&#34;</span>
+
+Set-Location agent
+
+Write-Host <span style="color:#e6db74">&#34;1. Determining matching Azure Pipelines agent...&#34;</span> -ForegroundColor Cyan
+
+$base64AuthInfo = <span style="color:#66d9ef">[Convert]</span>::ToBase64String(<span style="color:#66d9ef">[Text.Encoding]</span>::ASCII.GetBytes(<span style="color:#e6db74">&#34;:</span>$(Get-Content ${Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_TOKEN_FILE})<span style="color:#e6db74">&#34;</span>))
+$package = Invoke-RestMethod -Headers @{Authorization=(<span style="color:#e6db74">&#34;Basic $base64AuthInfo&#34;</span>)} <span style="color:#e6db74">&#34;</span>$(${Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_URL})<span style="color:#e6db74">/_apis/distributedtask/packages/agent?platform=win-x64&amp;</span><span style="color:#ae81ff">`$</span><span style="color:#e6db74">top=1&#34;</span>
+$packageUrl = $package[0].Value.downloadUrl
+
+Write-Host $packageUrl
+
+Write-Host <span style="color:#e6db74">&#34;2. Downloading and installing Azure Pipelines agent...&#34;</span> -ForegroundColor Cyan
+
+$wc = New-Object System.Net.WebClient
+$wc.DownloadFile($packageUrl, <span style="color:#e6db74">&#34;</span>$(Get-Location)<span style="color:#e6db74">\agent.zip&#34;</span>)
+
+Expand-Archive -Path <span style="color:#e6db74">&#34;agent.zip&#34;</span> -DestinationPath <span style="color:#e6db74">&#34;\azp\agent&#34;</span>
+
+<span style="color:#66d9ef">try</span>
+{
+  Write-Host <span style="color:#e6db74">&#34;3. Configuring Azure Pipelines agent...&#34;</span> -ForegroundColor Cyan
+
+  .\config.cmd --unattended `
+    --agent <span style="color:#e6db74">&#34;</span>$(<span style="color:#66d9ef">if</span> (Test-Path Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_AGENT_NAME) { ${Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_AGENT_NAME} } <span style="color:#66d9ef">else</span> { ${Env<span style="color:#960050;background-color:#1e0010">:</span>computername} })<span style="color:#e6db74">&#34;</span> `
+    --url <span style="color:#e6db74">&#34;</span>$(${Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_URL})<span style="color:#e6db74">&#34;</span> `
+    --auth PAT `
+    --token <span style="color:#e6db74">&#34;</span>$(Get-Content ${Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_TOKEN_FILE})<span style="color:#e6db74">&#34;</span> `
+    --pool <span style="color:#e6db74">&#34;</span>$(<span style="color:#66d9ef">if</span> (Test-Path Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_POOL) { ${Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_POOL} } <span style="color:#66d9ef">else</span> { <span style="color:#e6db74">&#39;Default&#39;</span> })<span style="color:#e6db74">&#34;</span> `
+    --work <span style="color:#e6db74">&#34;</span>$(<span style="color:#66d9ef">if</span> (Test-Path Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_WORK) { ${Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_WORK} } <span style="color:#66d9ef">else</span> { <span style="color:#e6db74">&#39;_work&#39;</span> })<span style="color:#e6db74">&#34;</span> `
+    -<span style="color:#f92672">-replace</span>
+
+  <span style="color:#75715e"># remove the administrative token before accepting work</span>
+  Remove-Item $Env:AZP_TOKEN_FILE
+
+  Write-Host <span style="color:#e6db74">&#34;4. Running Azure Pipelines agent...&#34;</span> -ForegroundColor Cyan
+
+  .\run.cmd
+}
+<span style="color:#66d9ef">finally</span>
+{
+  Write-Host <span style="color:#e6db74">&#34;Cleanup. Removing Azure Pipelines agent...&#34;</span> -ForegroundColor Cyan
+
+  .\config.cmd remove --unattended `
+    --auth PAT `
+    --token <span style="color:#e6db74">&#34;</span>$(Get-Content ${Env<span style="color:#960050;background-color:#1e0010">:</span>AZP_TOKEN_FILE})<span style="color:#e6db74">&#34;</span>
+}
+</code></pre></div><p>Create a new file named <code>InstallChoco.ps1</code>. This will be used to install choco in the docker images</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Powershell" data-lang="Powershell">
 
 <span style="color:#66d9ef">[Net.ServicePointManager]</span>::SecurityProtocol = <span style="color:#66d9ef">[Net.ServicePointManager]</span>::SecurityProtocol <span style="color:#f92672">-bor</span> <span style="color:#e6db74">&#34;Tls12&#34;</span>

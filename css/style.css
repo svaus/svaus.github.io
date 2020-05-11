@@ -1,8 +1,9 @@
 /* General */
 
 body {
-    font-weight: 300;
+    font-weight: 300;    
 }
+
 
 .max-width {
     max-width: 1280px;
