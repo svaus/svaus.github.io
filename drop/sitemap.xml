@@ -3,8 +3,13 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://svaus.github.io/posts/demo/</loc>
+    <lastmod>2020-05-23T20:29:16+10:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://svaus.github.io/posts/</loc>
-    <lastmod>2020-05-11T23:16:21+10:00</lastmod>
+    <lastmod>2020-05-23T20:29:16+10:00</lastmod>
   </url>
   
   <url>
