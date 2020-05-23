@@ -9,7 +9,7 @@
 <meta property="og:description" content="Blogs for dotnet, azure and devops" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://svaus.github.io/posts/" />
-<meta property="og:updated_time" content="2020-05-23T20:29:16+10:00" />
+<meta property="og:updated_time" content="2020-05-23T20:56:03+10:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -88,6 +88,30 @@
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
         <h3>
+            <a class="grey-text text-darken-3" href="/posts/dockerazpbuildagent/">Docker azure pipeline build agent</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name"></div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">May 10, 2020</span>
+</p></div>
+        <div>Creating a docker build agent for azure pipeline is very easy. There are few simple steps. We will be using chocoletey to create this agent.
+Firstly create a Dockerfile where we can provide docker instructions. In this case I am using windows core 2019 image, but you can use any other images.
+FROMmcr.microsoft.com/windows/servercore:ltsc2019SHELL [&#34;powershell&#34;, &#34;-Command&#34;, &#34;$ErrorActionPreference = &#39;Stop&#39;; $ProgressPreference = &#39;SilentlyContinue&#39;;&#34;]WORKDIR/azpCOPY InstallChoco.ps1 .RUN .\InstallChoco.ps1 COPY InstallDotNetCoreSdkChoco.ps1 .RUN .\InstallDotNetCoreSdkChoco.ps1COPY start.ps1 .CMD powershell .</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
             <a class="grey-text text-darken-3" href="/posts/jobschedulerwithdotnetcore/">Job scheduler with dotnet core</a>
         </h3>
         <div>
@@ -132,28 +156,6 @@ dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console d
 
 
 
-    
-        <article class="row max-width">
-    <div class="col s12 l10 offset-l1">
-        <h3>
-            <a class="grey-text text-darken-3" href="/posts/firstpost/">Firstpost</a>
-        </h3>
-        <div>
-
-<p class="article-meta">
-    <div class="article-meta-container">
-        <div class="article-meta-author-name"></div>
-        <div class="article-meta-description"></div>
-    </div>
-    <span class="article-meta-published-at grey-text text-darken-1">May 10, 2020</span>
-</p></div>
-        <div></div>
-    </div>
-</article>
-    
-
-
-
 
 
 <ul class="pagination center-align">
@@ -188,8 +190,21 @@ dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console d
             </li>
         
     
-    <li class="disabled">
-        <a  aria-label="Next"><i class="material-icons">chevron_right</i></a>
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect ">
+                <a href="/posts/page/3/">3</a>
+            </li>
+        
+    
+    <li class="waves-effect">
+        <a href="/posts/page/3/" aria-label="Next"><i class="material-icons">chevron_right</i></a>
     </li>
 </ul>
 
