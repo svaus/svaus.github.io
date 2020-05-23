@@ -1,35 +1,34 @@
 <!doctype html>
 <html lang="en">
   <head>
-	<meta name="generator" content="Hugo 0.70.0" />
     <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<meta property="og:title" content="Go Code" />
+<meta property="og:title" content="Posts" />
 <meta property="og:description" content="Blogs for dotnet, azure and devops" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://svaus.github.io/" />
-<meta property="og:updated_time" content="2020-05-10T12:33:26+10:00" />
+<meta property="og:url" content="https://svaus.github.io/posts/" />
+<meta property="og:updated_time" content="2020-05-11T23:16:21+10:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Go Code"/>
+<meta name="twitter:title" content="Posts"/>
 <meta name="twitter:description" content="Blogs for dotnet, azure and devops"/>
 
 
     <meta name="description" content="">
-    <link rel="canonical" href="https://svaus.github.io/">
+    <link rel="canonical" href="https://svaus.github.io/posts/">
 
     
-    <title>Go Code &middot; Go Code</title>
+    <title>Posts &middot; Go Code</title>
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link href="https://svaus.github.io/css/style.css" rel="stylesheet">
 
     
-      <link href="https://svaus.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Go Code &middot; Go Code" />
-      <link href="https://svaus.github.io/index.xml" rel="feed" type="application/rss+xml" title="Go Code &middot; Go Code" />
+      <link href="https://svaus.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Posts &middot; Go Code" />
+      <link href="https://svaus.github.io/posts/index.xml" rel="feed" type="application/rss+xml" title="Posts &middot; Go Code" />
     
 
     
@@ -89,7 +88,7 @@
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
         <h3>
-            <a class="grey-text text-darken-3" href="/posts/gettingstarteddotnetcoreapi/">Dotnet Core Api with Serilog, Autofac, Swagger</a>
+            <a class="grey-text text-darken-3" href="/posts/reactdotenv/">Reactdotenv</a>
         </h3>
         <div>
 
@@ -98,31 +97,7 @@
         <div class="article-meta-author-name"></div>
         <div class="article-meta-description"></div>
     </div>
-    <span class="article-meta-published-at grey-text text-darken-1">May 10, 2020</span>
-</p></div>
-        <div>This blog post we will create a sample DotNet Core Api project with :
- Serilog implementation with various sinks console, file, application insigths Autofac Swagger with ReDoc and Material Design  Tools used  VS Code Aspnet Core 2.2 SDK Azure (For Application Insights only)  dotnet new webapi Add Serilog Logging to project Add below packages to solution/project
-dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console dotnet add package Serilog.</div>
-    </div>
-</article>
-    
-
-
-
-    
-        <article class="row max-width">
-    <div class="col s12 l10 offset-l1">
-        <h3>
-            <a class="grey-text text-darken-3" href="/posts/firstpost/">Firstpost</a>
-        </h3>
-        <div>
-
-<p class="article-meta">
-    <div class="article-meta-container">
-        <div class="article-meta-author-name"></div>
-        <div class="article-meta-description"></div>
-    </div>
-    <span class="article-meta-published-at grey-text text-darken-1">May 10, 2020</span>
+    <span class="article-meta-published-at grey-text text-darken-1">May 11, 2020</span>
 </p></div>
         <div></div>
     </div>
@@ -135,7 +110,7 @@ dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console d
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
         <h3>
-            <a class="grey-text text-darken-3" href="/about/">About Me</a>
+            <a class="grey-text text-darken-3" href="/posts/dockerazpbuildagent/">Docker azure pipeline build agent</a>
         </h3>
         <div>
 
@@ -146,7 +121,33 @@ dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console d
     </div>
     <span class="article-meta-published-at grey-text text-darken-1">May 10, 2020</span>
 </p></div>
-        <div>A coder.</div>
+        <div>Creating a docker build agent for azure pipeline is very easy. There are few simple steps. We will be using chocoletey to create this agent.
+Firstly create a Dockerfile where we can provide docker instructions. In this case I am using windows core 2019 image, but you can use any other images.
+FROMmcr.microsoft.com/windows/servercore:ltsc2019SHELL [&#34;powershell&#34;, &#34;-Command&#34;, &#34;$ErrorActionPreference = &#39;Stop&#39;; $ProgressPreference = &#39;SilentlyContinue&#39;;&#34;]WORKDIR/azpCOPY InstallChoco.ps1 .RUN .\InstallChoco.ps1 COPY InstallDotNetCoreSdkChoco.ps1 .RUN .\InstallDotNetCoreSdkChoco.ps1COPY start.ps1 .CMD powershell .</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="grey-text text-darken-3" href="/posts/jobschedulerwithdotnetcore/">Job scheduler with dotnet core</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name"></div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">May 10, 2020</span>
+</p></div>
+        <div>This is sample job scheduler with Topshelf, Autofac, Quartz, log4Net. Currently using DotNet Core 2.0 version
+This repository implemetns a simple console application with following libraries
+ Topshelf : For creating service Autofac : For dependency injection Quartz : For scheduling job, also uses xml based job configuration log4net : For logging  Installation Build the solution in release mode and copy to server directory. Open command prompt in the directory.</div>
     </div>
 </article>
     
@@ -156,8 +157,8 @@ dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console d
 
 
 <ul class="pagination center-align">
-    <li class="waves-effect">
-        <a href="/" aria-label="Previous"><i class="material-icons">chevron_left</i></a>
+    <li class="disabled">
+        <a  aria-label="Previous"><i class="material-icons">chevron_left</i></a>
     </li>
     
     
@@ -169,26 +170,26 @@ dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console d
             
         
         
-            <li class="waves-effect ">
-                <a href="/">1</a>
-            </li>
-        
-    
-        
-        
-        
-        
-            
-            
-        
-        
             <li class="waves-effect active grey darken-4 ">
-                <a href="/page/2/">2</a>
+                <a href="/posts/">1</a>
             </li>
         
     
-    <li class="disabled">
-        <a  aria-label="Next"><i class="material-icons">chevron_right</i></a>
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect ">
+                <a href="/posts/page/2/">2</a>
+            </li>
+        
+    
+    <li class="waves-effect">
+        <a href="/posts/page/2/" aria-label="Next"><i class="material-icons">chevron_right</i></a>
     </li>
 </ul>
 

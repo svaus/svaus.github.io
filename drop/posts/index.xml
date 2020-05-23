@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Go Code</title>
+    <link>https://svaus.github.io/posts/</link>
+    <description>Recent content in Posts on Go Code</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>© 2020.</copyright>
+    <lastBuildDate>Mon, 11 May 2020 23:15:29 +1000</lastBuildDate>
+    
+	<atom:link href="https://svaus.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reactdotenv</title>
+      <link>https://svaus.github.io/posts/reactdotenv/</link>
+      <pubDate>Mon, 11 May 2020 23:15:29 +1000</pubDate>
+      
+      <guid>https://svaus.github.io/posts/reactdotenv/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker azure pipeline build agent</title>
+      <link>https://svaus.github.io/posts/dockerazpbuildagent/</link>
+      <pubDate>Sun, 10 May 2020 16:08:37 +1000</pubDate>
+      
+      <guid>https://svaus.github.io/posts/dockerazpbuildagent/</guid>
+      <description>Creating a docker build agent for azure pipeline is very easy. There are few simple steps. We will be using chocoletey to create this agent.
+Firstly create a Dockerfile where we can provide docker instructions. In this case I am using windows core 2019 image, but you can use any other images.
+FROMmcr.microsoft.com/windows/servercore:ltsc2019SHELL [&amp;#34;powershell&amp;#34;, &amp;#34;-Command&amp;#34;, &amp;#34;$ErrorActionPreference = &amp;#39;Stop&amp;#39;; $ProgressPreference = &amp;#39;SilentlyContinue&amp;#39;;&amp;#34;]WORKDIR/azpCOPY InstallChoco.ps1 .RUN .\InstallChoco.ps1 COPY InstallDotNetCoreSdkChoco.ps1 .RUN .\InstallDotNetCoreSdkChoco.ps1COPY start.ps1 .CMD powershell .</description>
+    </item>
+    
+    <item>
+      <title>Job scheduler with dotnet core</title>
+      <link>https://svaus.github.io/posts/jobschedulerwithdotnetcore/</link>
+      <pubDate>Sun, 10 May 2020 15:54:26 +1000</pubDate>
+      
+      <guid>https://svaus.github.io/posts/jobschedulerwithdotnetcore/</guid>
+      <description>This is sample job scheduler with Topshelf, Autofac, Quartz, log4Net. Currently using DotNet Core 2.0 version
+This repository implemetns a simple console application with following libraries
+ Topshelf : For creating service Autofac : For dependency injection Quartz : For scheduling job, also uses xml based job configuration log4net : For logging  Installation Build the solution in release mode and copy to server directory. Open command prompt in the directory.</description>
+    </item>
+    
+    <item>
+      <title>Dotnet Core Api with Serilog, Autofac, Swagger</title>
+      <link>https://svaus.github.io/posts/gettingstarteddotnetcoreapi/</link>
+      <pubDate>Sun, 10 May 2020 13:06:28 +1000</pubDate>
+      
+      <guid>https://svaus.github.io/posts/gettingstarteddotnetcoreapi/</guid>
+      <description>This blog post we will create a sample DotNet Core Api project with :
+ Serilog implementation with various sinks console, file, application insigths Autofac Swagger with ReDoc and Material Design  Tools used  VS Code Aspnet Core 2.2 SDK Azure (For Application Insights only)  dotnet new webapi Add Serilog Logging to project Add below packages to solution/project
+dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console dotnet add package Serilog.</description>
+    </item>
+    
+    <item>
+      <title>Firstpost</title>
+      <link>https://svaus.github.io/posts/firstpost/</link>
+      <pubDate>Sun, 10 May 2020 12:39:04 +1000</pubDate>
+      
+      <guid>https://svaus.github.io/posts/firstpost/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
