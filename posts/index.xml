@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Go Code</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 2020.</copyright>
-    <lastBuildDate>Sun, 10 May 2020 16:08:37 +1000</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2020 23:15:29 +1000</lastBuildDate>
     
 	<atom:link href="https://svaus.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Reactdotenv</title>
+      <link>https://svaus.github.io/posts/reactdotenv/</link>
+      <pubDate>Mon, 11 May 2020 23:15:29 +1000</pubDate>
+      
+      <guid>https://svaus.github.io/posts/reactdotenv/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Docker azure pipeline build agent</title>
