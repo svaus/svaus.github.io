@@ -9,7 +9,7 @@
 <meta property="og:description" content="Blogs for dotnet, azure and devops" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://svaus.github.io/posts/" />
-<meta property="og:updated_time" content="2020-05-11T23:15:29+10:00" />
+<meta property="og:updated_time" content="2020-05-23T20:29:16+10:00" />
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -88,6 +88,28 @@
         <article class="row max-width">
     <div class="col s12 l10 offset-l1">
         <h3>
+            <a class="grey-text text-darken-3" href="/posts/demo/">Demo</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name"></div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">May 23, 2020</span>
+</p></div>
+        <div>This is a demo</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
             <a class="grey-text text-darken-3" href="/posts/reactdotenv/">Reactdotenv</a>
         </h3>
         <div>
@@ -124,30 +146,6 @@
         <div>Creating a docker build agent for azure pipeline is very easy. There are few simple steps. We will be using chocoletey to create this agent.
 Firstly create a Dockerfile where we can provide docker instructions. In this case I am using windows core 2019 image, but you can use any other images.
 FROMmcr.microsoft.com/windows/servercore:ltsc2019SHELL [&#34;powershell&#34;, &#34;-Command&#34;, &#34;$ErrorActionPreference = &#39;Stop&#39;; $ProgressPreference = &#39;SilentlyContinue&#39;;&#34;]WORKDIR/azpCOPY InstallChoco.ps1 .RUN .\InstallChoco.ps1 COPY InstallDotNetCoreSdkChoco.ps1 .RUN .\InstallDotNetCoreSdkChoco.ps1COPY start.ps1 .CMD powershell .</div>
-    </div>
-</article>
-    
-
-
-
-    
-        <article class="row max-width">
-    <div class="col s12 l10 offset-l1">
-        <h3>
-            <a class="grey-text text-darken-3" href="/posts/jobschedulerwithdotnetcore/">Job scheduler with dotnet core</a>
-        </h3>
-        <div>
-
-<p class="article-meta">
-    <div class="article-meta-container">
-        <div class="article-meta-author-name"></div>
-        <div class="article-meta-description"></div>
-    </div>
-    <span class="article-meta-published-at grey-text text-darken-1">May 10, 2020</span>
-</p></div>
-        <div>This is sample job scheduler with Topshelf, Autofac, Quartz, log4Net. Currently using DotNet Core 2.0 version
-This repository implemetns a simple console application with following libraries
- Topshelf : For creating service Autofac : For dependency injection Quartz : For scheduling job, also uses xml based job configuration log4net : For logging  Installation Build the solution in release mode and copy to server directory. Open command prompt in the directory.</div>
     </div>
 </article>
     
