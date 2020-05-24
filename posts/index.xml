@@ -6,31 +6,13 @@
     <description>Recent content in Posts on Go Code</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>© 2020.</copyright>
-    <lastBuildDate>Sat, 23 May 2020 20:51:18 +1000</lastBuildDate>
+    <lastBuildDate>Mon, 11 May 2020 23:15:29 +1000</lastBuildDate>
     
 	<atom:link href="https://svaus.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Demoforyoutube</title>
-      <link>https://svaus.github.io/posts/demoforyoutube/</link>
-      <pubDate>Sat, 23 May 2020 20:51:18 +1000</pubDate>
-      
-      <guid>https://svaus.github.io/posts/demoforyoutube/</guid>
-      <description>This is a demo for you tube tutorial.</description>
-    </item>
-    
-    <item>
-      <title>Demo</title>
-      <link>https://svaus.github.io/posts/demo/</link>
-      <pubDate>Sat, 23 May 2020 20:28:28 +1000</pubDate>
-      
-      <guid>https://svaus.github.io/posts/demo/</guid>
-      <description>This is a demo</description>
-    </item>
-    
-    <item>
-      <title>Reactdotenv</title>
+      <title>Managing configuration in React App</title>
       <link>https://svaus.github.io/posts/reactdotenv/</link>
       <pubDate>Mon, 11 May 2020 23:15:29 +1000</pubDate>
       
@@ -69,15 +51,6 @@ This repository implemetns a simple console application with following libraries
       <description>This blog post we will create a sample DotNet Core Api project with :
  Serilog implementation with various sinks console, file, application insigths Autofac Swagger with ReDoc and Material Design  Tools used  VS Code Aspnet Core 2.2 SDK Azure (For Application Insights only)  dotnet new webapi Add Serilog Logging to project Add below packages to solution/project
 dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console dotnet add package Serilog.</description>
-    </item>
-    
-    <item>
-      <title>Firstpost</title>
-      <link>https://svaus.github.io/posts/firstpost/</link>
-      <pubDate>Sun, 10 May 2020 12:39:04 +1000</pubDate>
-      
-      <guid>https://svaus.github.io/posts/firstpost/</guid>
-      <description></description>
     </item>
     
   </channel>
