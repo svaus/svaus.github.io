@@ -1,114 +1,317 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="js csstransforms3d">
   <head>
     <meta charset="utf-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.70.0" />
+    <meta name="description" content="Blogs for dotnet, azure and devops">
+<meta name="author" content="Sanket Verma">
 
-<meta property="og:title" content="Docker azure pipeline build agent" />
-<meta property="og:description" content="Creating a docker build agent for azure pipeline is very easy. There are few simple steps. We will be using chocoletey to create this agent.
-Firstly create a Dockerfile where we can provide docker instructions. In this case I am using windows core 2019 image, but you can use any other images.
-FROMmcr.microsoft.com/windows/servercore:ltsc2019SHELL [&#34;powershell&#34;, &#34;-Command&#34;, &#34;$ErrorActionPreference = &#39;Stop&#39;; $ProgressPreference = &#39;SilentlyContinue&#39;;&#34;]WORKDIR/azpCOPY InstallChoco.ps1 .RUN .\InstallChoco.ps1 COPY InstallDotNetCoreSdkChoco.ps1 .RUN .\InstallDotNetCoreSdkChoco.ps1COPY start.ps1 .CMD powershell ." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://svaus.github.io/posts/dockerazpbuildagent/" />
-<meta property="article:published_time" content="2020-05-10T16:08:37+10:00" />
-<meta property="article:modified_time" content="2020-05-11T11:48:28+10:00" />
+    <link rel="icon" href="/images/favicon.png" type="image/png">
 
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Docker azure pipeline build agent"/>
-<meta name="twitter:description" content="Creating a docker build agent for azure pipeline is very easy. There are few simple steps. We will be using chocoletey to create this agent.
-Firstly create a Dockerfile where we can provide docker instructions. In this case I am using windows core 2019 image, but you can use any other images.
-FROMmcr.microsoft.com/windows/servercore:ltsc2019SHELL [&#34;powershell&#34;, &#34;-Command&#34;, &#34;$ErrorActionPreference = &#39;Stop&#39;; $ProgressPreference = &#39;SilentlyContinue&#39;;&#34;]WORKDIR/azpCOPY InstallChoco.ps1 .RUN .\InstallChoco.ps1 COPY InstallDotNetCoreSdkChoco.ps1 .RUN .\InstallDotNetCoreSdkChoco.ps1COPY start.ps1 .CMD powershell ."/>
-
-
-    <meta name="description" content="">
-    <link rel="canonical" href="https://svaus.github.io/posts/dockerazpbuildagent/">
+    <title>Docker azure pipeline build agent :: Blogs for dotnet, azure and devops</title>
 
     
-    <title>Docker azure pipeline build agent &middot; Go Code</title>
-
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link href="https://svaus.github.io/css/style.css" rel="stylesheet">
-
+    <link href="/css/nucleus.css?1590578858" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1590578858" rel="stylesheet">
+    <link href="/css/hybrid.css?1590578858" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1590578858" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1590578858" rel="stylesheet">
+    <link href="/css/auto-complete.css?1590578858" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1590578858" rel="stylesheet">
+    <link href="/css/theme.css?1590578858" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1590578858" rel="stylesheet">
+    
     
 
-    
+    <script src="/js/jquery-3.3.1.min.js?1590578858"></script>
 
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
     
   </head>
-  <body>
+  <body class="" data-url="/posts/dockerazpbuildagent/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://svaus.github.io/">
+  <div  style="width:100%; height:100%;"  style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">SV Go Code</div>
+  <svg id="grav-logo" style="width:100%; height:100%;" viewBox="0 0 504 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
     
+  </svg>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="Search...">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1590578858"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1590578858"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/svaus.github.io\/";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1590578858"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/posts/" title="Posts" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/posts/">
+          Posts
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
       
-
-
-
-<nav class="white" role="navigation">
-    <div class="row max-width">
-        <div class="col s12 l10 offset-l1">
+      
+        <ul>
+          
+          
+          
+          
+        
+          
             
-            <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text">
-                <i class="material-icons">menu</i>
-            </a>
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/posts/reactdotenv/" title="Managing configuration in React App" class="dd-item ">
+        <a href="/posts/reactdotenv/">
+        Managing configuration in React App
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
 
             
-            <ul id="nav-mobile" class="sidenav">
-                
-                
-    
-    
+          
+            
+            
 
-            </ul>
+
+
+
+ 
+  
+    
+      <li data-nav-id="/posts/dockerazpbuildagent/" title="Docker azure pipeline build agent" class="dd-item active">
+        <a href="/posts/dockerazpbuildagent/">
+        Docker azure pipeline build agent
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
 
             
-            <a href="/" class="brand-logo grey-text text-darken-3">Go Code</a>
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/posts/jobschedulerwithdotnetcore/" title="Job scheduler with dotnet core" class="dd-item ">
+        <a href="/posts/jobschedulerwithdotnetcore/">
+        Job scheduler with dotnet core
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
 
             
-            <div class="nav-wrapper">
+          
+            
+            
 
-                
-                <ul class="right hide-on-med-and-down">
-                    
-                    
+
+
+
+ 
+  
+    
+      <li data-nav-id="/posts/gettingstarteddotnetcoreapi/" title="Dotnet Core Api with Serilog, Autofac, Swagger" class="dd-item ">
+        <a href="/posts/gettingstarteddotnetcoreapi/">
+        Dotnet Core Api with Serilog, Autofac, Swagger
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
     
     
-
-                </ul>
-
-            </div>
-        </div>
-    </div>
-</nav>
+      <section id="shortcuts">
+        <h3>More</h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/svaus"><i class='fab fa-fw fa-github'></i> GitHub repo</a>
+              </li>
+          
+        </ul>
+      </section>
     
 
     
-
-<article class="max-width">
-    
-    <section class="row">
-        <div class="col s12 m10 offset-m1 l10 offset-l1">
-            <h1>Docker azure pipeline build agent</h1>
-        </div>
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> Clear History</a></li>
+      
+      </ul>
     </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
 
-    
-    
+    </section>
+  </div>
+</nav>
 
-    
-    <section class="row">
-        <div class="col s12 m8 offset-m2 l2 offset-l1">
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
             
-
-<p class="article-meta">
-    <div class="article-meta-container">
-        <div class="article-meta-author-name"></div>
-        <div class="article-meta-description"></div>
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Blogs for dotnet, azure and devops</a> > <a href='/posts/'>Posts</a> > Docker azure pipeline build agent
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents"></nav>
     </div>
-    <span class="article-meta-published-at grey-text text-darken-1">May 10, 2020</span>
-</p>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
         </div>
-        <div class="col s12 m8 offset-m2 l6">
-            <p>Creating a docker build agent for azure pipeline is very easy. There are few simple steps. We will be using chocoletey to create this agent.</p>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              Docker azure pipeline build agent
+            </h1>
+          
+
+        
+
+
+<p>Creating a docker build agent for azure pipeline is very easy. There are few simple steps. We will be using chocoletey to create this agent.</p>
+<p>Overall flow :
+
+<div class="mermaid" align="center">
+
+graph TD
+  A("Build Docker Image")
+  A-->B("Push image Azure Container Registry")
+  B-->C("Pull from Azure Container Registry")
+  C-->D("Create Docker container instance")
+  D-->E("Registers with Azure DevOps organisation")
+</div>
+</p>
 <p>Firstly create a Dockerfile where we can provide docker instructions. In this case I am using windows core 2019 image, but you can use any other images.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Dockerfile" data-lang="Dockerfile"><span style="color:#66d9ef">FROM</span><span style="color:#e6db74"> mcr.microsoft.com/windows/servercore:ltsc2019</span><span style="color:#960050;background-color:#1e0010">
 </span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#66d9ef">SHELL</span> [<span style="color:#e6db74">&#34;powershell&#34;</span>, <span style="color:#e6db74">&#34;-Command&#34;</span>, <span style="color:#e6db74">&#34;$ErrorActionPreference = &#39;Stop&#39;; $ProgressPreference = &#39;SilentlyContinue&#39;;&#34;</span>]<span style="color:#960050;background-color:#1e0010">
@@ -226,50 +429,165 @@ choco install dotnetcore-sdk -version 3.1.0 --confirm --limit-output
 
 </code></pre></div><p>Have fun !!</p>
 
-        </div>
-    </section>
-</article>
 
-
-
-    
-      <footer class="page-footer grey lighten-5">
-    <div class="row max-width">
-        <div class="col s12 l10 offset-l1 clear-padding">
-            <div class="row">
-    
-        
-    
-
-    
-    
-    <div class="col s12 l12">
-        <h5 class="black-text">Have fun with coding</h5>
-<p class="grey-text text-darken-4">Look for posts on dotnet, azure, devops blogs.</p>
-    </div>
-
-    
-</div>
-
-
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="row max-width" style="width: 100%;">
-            <div class="col s12 l10 offset-l1">
-                <span class="grey-text text-darken-4">© 2020.</span>
-<div class="right">
-    
-</div>
-            </div>
-        </div>
-    </div>
+<footer class="footline">
+	
 </footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/posts/reactdotenv/" title="Managing configuration in React App"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/posts/jobschedulerwithdotnetcore/" title="Job scheduler with dotnet core" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1590578858"></script>
+    <script src="/js/perfect-scrollbar.min.js?1590578858"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1590578858"></script>
+    <script src="/js/jquery.sticky.js?1590578858"></script>
+    <script src="/js/featherlight.min.js?1590578858"></script>
+    <script src="/js/highlight.pack.js?1590578858"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1590578858"></script>
+    <script src="/js/learn.js?1590578858"></script>
+    <script src="/js/hugo-learn.js?1590578858"></script>
+
+    <link href="/mermaid/mermaid.css?1590578858" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1590578858"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
     
 
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://svaus.github.io/js/script.js"></script>
   </body>
 </html>
+

@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Go Code</title>
+    <title>Blogs for dotnet, azure and devops</title>
     <link>https://svaus.github.io/</link>
-    <description>Recent content on Go Code</description>
+    <description>Recent content on Blogs for dotnet, azure and devops</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
     <copyright>© 2020.</copyright>
     <lastBuildDate>Sun, 10 May 2020 12:33:26 +1000</lastBuildDate>
     
@@ -12,30 +13,12 @@
     
     
     <item>
-      <title>Demoforyoutube</title>
-      <link>https://svaus.github.io/posts/demoforyoutube/</link>
-      <pubDate>Sat, 23 May 2020 20:51:18 +1000</pubDate>
-      
-      <guid>https://svaus.github.io/posts/demoforyoutube/</guid>
-      <description>This is a demo for you tube tutorial.</description>
-    </item>
-    
-    <item>
-      <title>Demo</title>
-      <link>https://svaus.github.io/posts/demo/</link>
-      <pubDate>Sat, 23 May 2020 20:28:28 +1000</pubDate>
-      
-      <guid>https://svaus.github.io/posts/demo/</guid>
-      <description>This is a demo</description>
-    </item>
-    
-    <item>
-      <title>Reactdotenv</title>
+      <title>Managing configuration in React App</title>
       <link>https://svaus.github.io/posts/reactdotenv/</link>
       <pubDate>Mon, 11 May 2020 23:15:29 +1000</pubDate>
       
       <guid>https://svaus.github.io/posts/reactdotenv/</guid>
-      <description></description>
+      <description>Coming soon..</description>
     </item>
     
     <item>
@@ -45,8 +28,7 @@
       
       <guid>https://svaus.github.io/posts/dockerazpbuildagent/</guid>
       <description>Creating a docker build agent for azure pipeline is very easy. There are few simple steps. We will be using chocoletey to create this agent.
-Firstly create a Dockerfile where we can provide docker instructions. In this case I am using windows core 2019 image, but you can use any other images.
-FROMmcr.microsoft.com/windows/servercore:ltsc2019SHELL [&amp;#34;powershell&amp;#34;, &amp;#34;-Command&amp;#34;, &amp;#34;$ErrorActionPreference = &amp;#39;Stop&amp;#39;; $ProgressPreference = &amp;#39;SilentlyContinue&amp;#39;;&amp;#34;]WORKDIR/azpCOPY InstallChoco.ps1 .RUN .\InstallChoco.ps1 COPY InstallDotNetCoreSdkChoco.ps1 .RUN .\InstallDotNetCoreSdkChoco.ps1COPY start.ps1 .CMD powershell .</description>
+Overall flow : graph TD A(&#34;Build Docker Image&#34;) A--B(&#34;Push image Azure Container Registry&#34;) B--C(&#34;Pull from Azure Container Registry&#34;) C--D(&#34;Create Docker container instance&#34;) D--E(&#34;Registers with Azure DevOps organisation&#34;) Firstly create a Dockerfile where we can provide docker instructions. In this case I am using windows core 2019 image, but you can use any other images.</description>
     </item>
     
     <item>
@@ -69,15 +51,6 @@ This repository implemetns a simple console application with following libraries
       <description>This blog post we will create a sample DotNet Core Api project with :
  Serilog implementation with various sinks console, file, application insigths Autofac Swagger with ReDoc and Material Design  Tools used  VS Code Aspnet Core 2.2 SDK Azure (For Application Insights only)  dotnet new webapi Add Serilog Logging to project Add below packages to solution/project
 dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console dotnet add package Serilog.</description>
-    </item>
-    
-    <item>
-      <title>Firstpost</title>
-      <link>https://svaus.github.io/posts/firstpost/</link>
-      <pubDate>Sun, 10 May 2020 12:39:04 +1000</pubDate>
-      
-      <guid>https://svaus.github.io/posts/firstpost/</guid>
-      <description></description>
     </item>
     
     <item>
