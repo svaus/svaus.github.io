@@ -12,19 +12,19 @@
     <title>Create Website in minutes with Hugo :: Blogs for dotnet, azure and devops</title>
 
     
-    <link href="/css/nucleus.css?1590891803" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1590891803" rel="stylesheet">
-    <link href="/css/hybrid.css?1590891803" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1590891803" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1590891803" rel="stylesheet">
-    <link href="/css/auto-complete.css?1590891803" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1590891803" rel="stylesheet">
-    <link href="/css/theme.css?1590891803" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1590891803" rel="stylesheet">
+    <link href="/css/nucleus.css?1590895714" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1590895714" rel="stylesheet">
+    <link href="/css/hybrid.css?1590895714" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1590895714" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1590895714" rel="stylesheet">
+    <link href="/css/auto-complete.css?1590895714" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1590895714" rel="stylesheet">
+    <link href="/css/theme.css?1590895714" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1590895714" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1590891803"></script>
+    <script src="/js/jquery-3.3.1.min.js?1590895714"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1590891803"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1590891803"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1590895714"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1590895714"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/svaus.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1590891803"></script>
+<script type="text/javascript" src="/js/search.js?1590895714"></script>
 
     
   </div>
@@ -386,13 +386,65 @@ graph LR
 </div>
 
 <h1 id="introduction">Introduction</h1>
+<p>Creating a static website is very easy. There are many static site generators like Hugo, jKeyll, NextJS, etc. In this blog post we will discuss about Hugo.</p>
+<p>Hugo is very popular static website generator. It allows you to create a static site in matter of minutes. Once we create this site, we need to host it some where. Hang on thats going to cost money. Naah!! Here comes GitHub Pages. It allows you to host static website for free.</p>
+<p>So let us dive in and get a website created in minutes.</p>
 <h1 id="prerequisites">Prerequisites</h1>
-<h1 id="tools">Tools</h1>
+<ol>
+<li>Install Git in local</li>
+<li>GitHub login</li>
+</ol>
+<h1 id="tools-used">Tools used</h1>
+<ol>
+<li>VS Code or any other editor</li>
+<li>Hugo</li>
+</ol>
 <h1 id="install-hugo">Install Hugo</h1>
+<p>Installing Hugo is very easy. Below link has steps for installation.
+<a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></p>
+<p>If on windows go to below link and download the zip file. Once the zip file is extracted, you will find an executable file. Double click on it to install it in local system.</p>
+<p><a href="https://github.com/gohugoio/hugo/releases/download/v0.71.1/hugo_0.71.1_Windows-64bit.zip">https://github.com/gohugoio/hugo/releases/download/v0.71.1/hugo_0.71.1_Windows-64bit.zip</a></p>
 <h1 id="create-website">Create Website</h1>
+<p>Create a folder which will have your website content. To create a website just enter below command in the VS Code terminal. If Hugo is installed correctly it will create a website.</p>
+<pre><code>hugo new site {yourwebsitename}
+</code></pre><p>Add content as below</p>
+<pre><code>hugo new introduction.md
+</code></pre><p>To see the website in local machine use below command</p>
+<pre><code>hugo serve -D
+</code></pre><p>This will convert all markdown content to HTML pages and publish to http://localhost:1313. Browse to this URL in local and you will see your website.</p>
+<p>Congratulation! you have built a basic website. But this is still not enough as it doesn&rsquo;t look professional. So let us make this website more professional by applying theme.</p>
 <h1 id="apply-theme">Apply theme</h1>
+<p>Hugo has a range of existing themes. All the themes are listed at below website.</p>
+<p><a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></p>
+<p>Pick any theme that you like. I am going to pick below theme.</p>
+<p><a href="https://github.com/themefisher/kross-hugo">https://github.com/themefisher/kross-hugo</a></p>
+<p>Locate a <code>themes</code> folder in the directory and clone the theme. If you don&rsquo;t know how to clone, just download it and create a folder under themes call it as <code>mytheme</code>.</p>
+<p>In order for the theme to reflect, go to <code>config.toml</code> file and change below configuration :</p>
+<pre><code>theme = &quot;mytheme&quot;
+</code></pre><p>Run the site again and you should see new theme applied.</p>
 <h1 id="publish-website">Publish website</h1>
+<p>This step is really interesting. We will be using GitHub Pages for hosting the website. GitHub Pages is free for static websites. You can also use netlify or AWS or Azure or any other platform of your choice to host the website.</p>
+<ol>
+<li>Create a repository on GitHub named &lsquo;{githubusername}{yourwebsitename}'. Set the name of the repository to {githubusername.github.io}.</li>
+</ol>
+<p><img src="/CreateNewGitHubRepo.PNG" alt="image alt text"></p>
+<p><img src="/SetGitHubPagesSetting.PNG" alt="image alt text"></p>
+<ol start="2">
+<li>Final step is to push the changes. Run below command</li>
+</ol>
+<pre><code>hugo
+</code></pre><p>This command will generate bunch of files in a folder called <strong>public</strong>. We need to push this folder to repository that we created.</p>
+<pre><code>cd public
+git clone 'githubrepo.github.io'
+git add .
+git commit -m &quot;Publishing my new website&quot;
+git push origin master
+</code></pre><p>This is the most complex part, if you can do this few command (if you are a developer its easy, if not then might take couple more minutes), you will get your website</p>
+<p><a href="https://githubrepo.github.io">https://githubrepo.github.io</a></p>
+<p>Waw!!! All done.</p>
 <h1 id="conclusion">Conclusion</h1>
+<p>As you can see it is very easy to create a website of your own using Hugo. We used GitHub Pages to host it which is free of cost.</p>
+<p>Enjoy!!!</p>
 
 
 <footer class="footline">
@@ -580,19 +632,19 @@ graph LR
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1590891803"></script>
-    <script src="/js/perfect-scrollbar.min.js?1590891803"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1590891803"></script>
-    <script src="/js/jquery.sticky.js?1590891803"></script>
-    <script src="/js/featherlight.min.js?1590891803"></script>
-    <script src="/js/highlight.pack.js?1590891803"></script>
+    <script src="/js/clipboard.min.js?1590895714"></script>
+    <script src="/js/perfect-scrollbar.min.js?1590895714"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1590895714"></script>
+    <script src="/js/jquery.sticky.js?1590895714"></script>
+    <script src="/js/featherlight.min.js?1590895714"></script>
+    <script src="/js/highlight.pack.js?1590895714"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1590891803"></script>
-    <script src="/js/learn.js?1590891803"></script>
-    <script src="/js/hugo-learn.js?1590891803"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1590895714"></script>
+    <script src="/js/learn.js?1590895714"></script>
+    <script src="/js/hugo-learn.js?1590895714"></script>
 
-    <link href="/mermaid/mermaid.css?1590891803" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1590891803"></script>
+    <link href="/mermaid/mermaid.css?1590895714" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1590895714"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
