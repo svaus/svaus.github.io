@@ -18,7 +18,7 @@
       <pubDate>Sun, 31 May 2020 11:04:26 +1000</pubDate>
       
       <guid>https://svaus.github.io/posts/createwebsiteusinghugo/</guid>
-      <description>graph LR A(&#34;Introduction&#34;) A--B(&#34;Prerequisites&#34;) B--C(&#34;Tools&#34;) C--D(&#34;Install Hugo&#34;) D--E(&#34;Create Website&#34;) E--F(&#34;Apply theme&#34;) F--G(&#34;Publish website&#34;) G--H(&#34;Conclusion&#34;) Introduction Prerequisites Tools Install Hugo Create Website Apply theme Publish website Conclusion </description>
+      <description>graph LR A(&#34;Introduction&#34;) A--B(&#34;Prerequisites&#34;) B--C(&#34;Tools&#34;) C--D(&#34;Install Hugo&#34;) D--E(&#34;Create Website&#34;) E--F(&#34;Apply theme&#34;) F--G(&#34;Publish website&#34;) G--H(&#34;Conclusion&#34;) style A fill:#8451a1,stroke:#333,stroke-width:4px style B fill:#8451a1,stroke:#333,stroke-width:4px style C fill:#8451a1,stroke:#333,stroke-width:4px style D fill:#8451a1,stroke:#333,stroke-width:4px style E fill:#8451a1,stroke:#333,stroke-width:4px style F fill:#8451a1,stroke:#333,stroke-width:4px style G fill:#8451a1,stroke:#333,stroke-width:4px style H fill:#8451a1,stroke:#333,stroke-width:4px Introduction Prerequisites Tools Install Hugo Create Website Apply theme Publish website Conclusion </description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@
       
       <guid>https://svaus.github.io/posts/blazor/introductiontoblazor/</guid>
       <description>Coming soon&amp;hellip;
-Introduction Why? When? What? Conclusion </description>
+Why? When? What? Conclusion </description>
     </item>
     
     <item>
@@ -57,7 +57,7 @@ Introduction React application these days is very easy to get started. However a
       
       <guid>https://svaus.github.io/posts/dockerazpbuildagent/</guid>
       <description>Creating a docker build agent for azure pipeline is very easy. There are few simple steps. We will be using chocoletey to create this agent.
-Overall flow : graph TD A(&#34;Build Docker Image&#34;) A--B(&#34;Push image Azure Container Registry&#34;) B--C(&#34;Pull from Azure Container Registry&#34;) C--D(&#34;Create Docker container instance&#34;) D--E(&#34;Registers with Azure DevOps organisation&#34;) Firstly create a Dockerfile where we can provide docker instructions. In this case I am using windows core 2019 image, but you can use any other images.</description>
+Overall flow : graph TD A(&#34;Build Docker Image&#34;) A--B(&#34;Push image Azure Container Registry&#34;) B--C(&#34;Pull from Azure Container Registry&#34;) C--D(&#34;Create Docker container instance&#34;) D--E(&#34;Registers with Azure DevOps organisation&#34;) style A fill:#8451a1,stroke:#333,stroke-width:4px style B fill:#8451a1,stroke:#333,stroke-width:4px style C fill:#8451a1,stroke:#333,stroke-width:4px style D fill:#8451a1,stroke:#333,stroke-width:4px style E fill:#8451a1,stroke:#333,stroke-width:4px Firstly create a Dockerfile where we can provide docker instructions.</description>
     </item>
     
     <item>
