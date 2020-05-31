@@ -18,8 +18,8 @@
       <pubDate>Sun, 31 May 2020 11:04:26 +1000</pubDate>
       
       <guid>https://svaus.github.io/posts/createwebsiteusinghugo/</guid>
-      <description>graph LR A(&#34;Introduction&#34;) A--B(&#34;Prerequisites&#34;) B--C(&#34;Tools&#34;) C--D(&#34;Install Hugo&#34;) D--E(&#34;Create Website&#34;) E--F(&#34;Apply theme&#34;) F--G(&#34;Publish website&#34;) G--H(&#34;Conclusion&#34;) style A fill:#8451a1,stroke:#333,stroke-width:4px style B fill:#8451a1,stroke:#333,stroke-width:4px style C fill:#8451a1,stroke:#333,stroke-width:4px style D fill:#8451a1,stroke:#333,stroke-width:4px style E fill:#8451a1,stroke:#333,stroke-width:4px style F fill:#8451a1,stroke:#333,stroke-width:4px style G fill:#8451a1,stroke:#333,stroke-width:4px style H fill:#8451a1,stroke:#333,stroke-width:4px Introduction Creating a static website is very easy. There are many static site generators like Hugo, jKeyll, NextJS, etc. In this blog post we will discuss about Hugo.
-Hugo is very popular static website generator.</description>
+      <description>Introduction Creating a static website is very easy. There are many static site generators like Hugo, jKeyll, NextJS, etc. In this blog post we will discuss about Hugo.
+Hugo is very popular static website generator. It allows you to create a static site in matter of minutes. Once we create this site, we need to host it some where. Hang on thats going to cost money. Naah!! Here comes GitHub Pages.</description>
     </item>
     
     <item>
