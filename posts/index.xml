@@ -28,8 +28,8 @@ Hugo is very popular static website generator. It allows you to create a static 
       <pubDate>Mon, 25 May 2020 12:51:37 +1000</pubDate>
       
       <guid>https://svaus.github.io/posts/blazor/introductiontoblazor/</guid>
-      <description>Coming soon&amp;hellip;
-Why? When? What? Conclusion </description>
+      <description>Blazor Web Assembly is the new technology announced by Microsoft in Build conference 2020. This has been long time coming.
+Why? Dotnet has wide range of application frameworks available. It has Web Pages, ASP.NET MVC, Razor Pages as the main technologies. However other frameworks like Angular, React and Vue JS has become popular in last few years. These frameworks are built to be running on client browser as JavaScript. And they are really fast.</description>
     </item>
     
     <item>
