@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <html lang="en">
   <head>
@@ -212,4 +213,465 @@ dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console d
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="https://svaus.github.io/js/script.js"></script>
   </body>
+=======
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Posts" />
+<meta property="og:description" content="Blogs for dotnet, azure and devops" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://svaus.github.io/posts/" />
+<<<<<<< HEAD
+<meta property="og:updated_time" content="2020-05-23T20:51:18+10:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content="Blogs for dotnet, azure and devops"/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://svaus.github.io/posts/">
+
+    
+    <title>Posts &middot; Go Code</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://svaus.github.io/css/style.css" rel="stylesheet">
+
+    
+      <link href="https://svaus.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Posts &middot; Go Code" />
+      <link href="https://svaus.github.io/posts/index.xml" rel="feed" type="application/rss+xml" title="Posts &middot; Go Code" />
+    
+
+    
+
+    
+  </head>
+  <body>
+    
+      
+
+
+
+<nav class="white" role="navigation">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1">
+            
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text">
+                <i class="material-icons">menu</i>
+            </a>
+
+            
+            <ul id="nav-mobile" class="sidenav">
+                
+                
+    
+    
+
+            </ul>
+
+            
+            <a href="/" class="brand-logo grey-text text-darken-3">Go Code</a>
+
+            
+            <div class="nav-wrapper">
+
+                
+                <ul class="right hide-on-med-and-down">
+                    
+                    
+    
+    
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>
+    
+
+    
+
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="grey-text text-darken-3" href="/posts/dockerazpbuildagent/">Docker azure pipeline build agent</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name"></div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">May 10, 2020</span>
+</p></div>
+        <div>Creating a docker build agent for azure pipeline is very easy. There are few simple steps. We will be using chocoletey to create this agent.
+Firstly create a Dockerfile where we can provide docker instructions. In this case I am using windows core 2019 image, but you can use any other images.
+FROMmcr.microsoft.com/windows/servercore:ltsc2019SHELL [&#34;powershell&#34;, &#34;-Command&#34;, &#34;$ErrorActionPreference = &#39;Stop&#39;; $ProgressPreference = &#39;SilentlyContinue&#39;;&#34;]WORKDIR/azpCOPY InstallChoco.ps1 .RUN .\InstallChoco.ps1 COPY InstallDotNetCoreSdkChoco.ps1 .RUN .\InstallDotNetCoreSdkChoco.ps1COPY start.ps1 .CMD powershell .</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="grey-text text-darken-3" href="/posts/jobschedulerwithdotnetcore/">Job scheduler with dotnet core</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name"></div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">May 10, 2020</span>
+</p></div>
+        <div>This is sample job scheduler with Topshelf, Autofac, Quartz, log4Net. Currently using DotNet Core 2.0 version
+This repository implemetns a simple console application with following libraries
+ Topshelf : For creating service Autofac : For dependency injection Quartz : For scheduling job, also uses xml based job configuration log4net : For logging  Installation Build the solution in release mode and copy to server directory. Open command prompt in the directory.</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="grey-text text-darken-3" href="/posts/gettingstarteddotnetcoreapi/">Dotnet Core Api with Serilog, Autofac, Swagger</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name"></div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">May 10, 2020</span>
+</p></div>
+        <div>This blog post we will create a sample DotNet Core Api project with :
+ Serilog implementation with various sinks console, file, application insigths Autofac Swagger with ReDoc and Material Design  Tools used  VS Code Aspnet Core 2.2 SDK Azure (For Application Insights only)  dotnet new webapi Add Serilog Logging to project Add below packages to solution/project
+dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console dotnet add package Serilog.</div>
+    </div>
+</article>
+    
+
+
+
+
+
+<ul class="pagination center-align">
+    <li class="waves-effect">
+        <a href="/posts/" aria-label="Previous"><i class="material-icons">chevron_left</i></a>
+    </li>
+    
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect ">
+                <a href="/posts/">1</a>
+            </li>
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect active grey darken-4 ">
+                <a href="/posts/page/2/">2</a>
+            </li>
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect ">
+                <a href="/posts/page/3/">3</a>
+            </li>
+        
+    
+    <li class="waves-effect">
+        <a href="/posts/page/3/" aria-label="Next"><i class="material-icons">chevron_right</i></a>
+    </li>
+</ul>
+
+
+
+
+    
+      <footer class="page-footer grey lighten-5">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l12">
+        <h5 class="black-text">Have fun with coding</h5>
+<p class="grey-text text-darken-4">Look for posts on dotnet, azure, devops blogs.</p>
+    </div>
+
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="grey-text text-darken-4">© 2020.</span>
+<div class="right">
+    
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://svaus.github.io/js/script.js"></script>
+  </body>
+=======
+<meta property="og:updated_time" content="2020-05-23T20:56:03+10:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content="Blogs for dotnet, azure and devops"/>
+
+
+    <meta name="description" content="">
+    <link rel="canonical" href="https://svaus.github.io/posts/">
+
+    
+    <title>Posts &middot; Go Code</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://svaus.github.io/css/style.css" rel="stylesheet">
+
+    
+      <link href="https://svaus.github.io/posts/index.xml" rel="alternate" type="application/rss+xml" title="Posts &middot; Go Code" />
+      <link href="https://svaus.github.io/posts/index.xml" rel="feed" type="application/rss+xml" title="Posts &middot; Go Code" />
+    
+
+    
+
+    
+  </head>
+  <body>
+    
+      
+
+
+
+<nav class="white" role="navigation">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1">
+            
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger black-text">
+                <i class="material-icons">menu</i>
+            </a>
+
+            
+            <ul id="nav-mobile" class="sidenav">
+                
+                
+    
+    
+
+            </ul>
+
+            
+            <a href="/" class="brand-logo grey-text text-darken-3">Go Code</a>
+
+            
+            <div class="nav-wrapper">
+
+                
+                <ul class="right hide-on-med-and-down">
+                    
+                    
+    
+    
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>
+    
+
+    
+
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="grey-text text-darken-3" href="/posts/gettingstarteddotnetcoreapi/">Dotnet Core Api with Serilog, Autofac, Swagger</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name"></div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">May 10, 2020</span>
+</p></div>
+        <div>This blog post we will create a sample DotNet Core Api project with :
+ Serilog implementation with various sinks console, file, application insigths Autofac Swagger with ReDoc and Material Design  Tools used  VS Code Aspnet Core 2.2 SDK Azure (For Application Insights only)  dotnet new webapi Add Serilog Logging to project Add below packages to solution/project
+dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console dotnet add package Serilog.</div>
+    </div>
+</article>
+    
+
+
+
+    
+        <article class="row max-width">
+    <div class="col s12 l10 offset-l1">
+        <h3>
+            <a class="grey-text text-darken-3" href="/posts/firstpost/">Firstpost</a>
+        </h3>
+        <div>
+
+<p class="article-meta">
+    <div class="article-meta-container">
+        <div class="article-meta-author-name"></div>
+        <div class="article-meta-description"></div>
+    </div>
+    <span class="article-meta-published-at grey-text text-darken-1">May 10, 2020</span>
+</p></div>
+        <div></div>
+    </div>
+</article>
+    
+
+
+
+
+
+<ul class="pagination center-align">
+    <li class="waves-effect">
+        <a href="/posts/" aria-label="Previous"><i class="material-icons">chevron_left</i></a>
+    </li>
+    
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect ">
+                <a href="/posts/">1</a>
+            </li>
+        
+    
+        
+        
+        
+        
+            
+            
+        
+        
+            <li class="waves-effect active grey darken-4 ">
+                <a href="/posts/page/2/">2</a>
+            </li>
+        
+    
+    <li class="disabled">
+        <a  aria-label="Next"><i class="material-icons">chevron_right</i></a>
+    </li>
+</ul>
+
+
+
+
+    
+      <footer class="page-footer grey lighten-5">
+    <div class="row max-width">
+        <div class="col s12 l10 offset-l1 clear-padding">
+            <div class="row">
+    
+        
+    
+
+    
+    
+    <div class="col s12 l12">
+        <h5 class="black-text">Have fun with coding</h5>
+<p class="grey-text text-darken-4">Look for posts on dotnet, azure, devops blogs.</p>
+    </div>
+
+    
+</div>
+
+
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="row max-width" style="width: 100%;">
+            <div class="col s12 l10 offset-l1">
+                <span class="grey-text text-darken-4">© 2020.</span>
+<div class="right">
+    
+</div>
+            </div>
+        </div>
+    </div>
+</footer>
+    
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://svaus.github.io/js/script.js"></script>
+  </body>
+>>>>>>> f70ec444d2773125bb825e7b92d97fac5423eb24
+>>>>>>> 1f3e8b0b5eae60c56f588e90bd02d80d3d63d117
 </html>

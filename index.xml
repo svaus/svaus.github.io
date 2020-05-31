@@ -13,12 +13,41 @@
     
     
     <item>
+      <title>Create Website in minutes with Hugo</title>
+      <link>https://svaus.github.io/posts/createwebsiteusinghugo/</link>
+      <pubDate>Sun, 31 May 2020 11:04:26 +1000</pubDate>
+      
+      <guid>https://svaus.github.io/posts/createwebsiteusinghugo/</guid>
+      <description>graph LR A(&#34;Introduction&#34;) A--B(&#34;Prerequisites&#34;) B--C(&#34;Tools&#34;) C--D(&#34;Install Hugo&#34;) D--E(&#34;Create Website&#34;) E--F(&#34;Apply theme&#34;) F--G(&#34;Publish website&#34;) G--H(&#34;Conclusion&#34;) Introduction Prerequisites Tools Install Hugo Create Website Apply theme Publish website Conclusion </description>
+    </item>
+    
+    <item>
+      <title>Introuction to Blazor</title>
+      <link>https://svaus.github.io/posts/blazor/introductiontoblazor/</link>
+      <pubDate>Mon, 25 May 2020 12:51:37 +1000</pubDate>
+      
+      <guid>https://svaus.github.io/posts/blazor/introductiontoblazor/</guid>
+      <description>Coming soon&amp;hellip;
+Introduction Why? When? What? Conclusion </description>
+    </item>
+    
+    <item>
+      <title>Creating Blazor Component</title>
+      <link>https://svaus.github.io/posts/blazor/creatingcomponent/</link>
+      <pubDate>Sun, 24 May 2020 12:51:37 +1000</pubDate>
+      
+      <guid>https://svaus.github.io/posts/blazor/creatingcomponent/</guid>
+      <description>Coming soon&amp;hellip;</description>
+    </item>
+    
+    <item>
       <title>Managing configuration in React App</title>
       <link>https://svaus.github.io/posts/reactdotenv/</link>
       <pubDate>Mon, 11 May 2020 23:15:29 +1000</pubDate>
       
       <guid>https://svaus.github.io/posts/reactdotenv/</guid>
-      <description>Coming soon..</description>
+      <description>Coming soon..
+Introduction React application these days is very easy to get started. However after using &amp;ldquo;getting started&amp;rdquo;, few things get interesting. Found managing configuration in a React Application one of them. If you are trying with Create React App its different. But generally we dont use Create React App in actual real world application. May be some people do, but I won&amp;rsquo;t. Why? Because I want little more control over dependencies, packages, extensibility, yada yada yada.</description>
     </item>
     
     <item>
@@ -59,7 +88,8 @@ dotnet add package Serilog.AspNetCore dotnet add package Serilog.Sinks.Console d
       <pubDate>Sun, 10 May 2020 12:33:26 +1000</pubDate>
       
       <guid>https://svaus.github.io/about/</guid>
-      <description>A coder.</description>
+      <description>Introduction Myself, Sanket Kumar Verma, and I love coding. Infact not coding but its kind of art, trying to understand complex business problems in a Developer way. Is there a difference? Yes. Finding most suited solution for the problem is very important. Application Architect with 13+ years of experience working in Software Industry. Australian experience around 8 years while working in Sydney.
+Tools and Technologies: • Experience integration/application architect in Microservices, DevOps, Azure, Asp.</description>
     </item>
     
   </channel>

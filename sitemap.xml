@@ -3,12 +3,27 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://svaus.github.io/posts/reactdotenv/</loc>
-    <lastmod>2020-05-11T23:15:29+10:00</lastmod>
+    <loc>https://svaus.github.io/posts/createwebsiteusinghugo/</loc>
+    <lastmod>2020-05-31T11:04:26+10:00</lastmod>
   </url>
   
   <url>
     <loc>https://svaus.github.io/posts/</loc>
+    <lastmod>2020-05-31T11:04:26+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://svaus.github.io/posts/blazor/introductiontoblazor/</loc>
+    <lastmod>2020-05-25T12:51:37+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://svaus.github.io/posts/blazor/creatingcomponent/</loc>
+    <lastmod>2020-05-24T12:51:37+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://svaus.github.io/posts/reactdotenv/</loc>
     <lastmod>2020-05-11T23:15:29+10:00</lastmod>
   </url>
   
