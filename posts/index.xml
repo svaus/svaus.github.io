@@ -23,14 +23,14 @@ Hugo is very popular static website generator. It allows you to create a static 
     </item>
     
     <item>
-      <title>Introuction to Blazor</title>
+      <title>Introduction to Blazor</title>
       <link>https://svaus.github.io/posts/blazor/introductiontoblazor/</link>
       <pubDate>Mon, 25 May 2020 12:51:37 +1000</pubDate>
       
       <guid>https://svaus.github.io/posts/blazor/introductiontoblazor/</guid>
       <description>Blazor Web Assembly is the new technology announced by Microsoft in Build conference 2020. This has been long time coming. Let us look at few basic things before we do a deep dive into Blazor.
 Here in this blog I will write my point of view for Blazor. This will help developers who are getting started with Blazor to understand why? when? what&amp;rsquo;s not there?
-I will keep reviewing this blog as an when I discover or learn more about this newframework.</description>
+I will keep reviewing this blog as an when I discover or learn more about this new framework.</description>
     </item>
     
     <item>
