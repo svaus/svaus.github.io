@@ -53,16 +53,6 @@ Introduction React application these days is very easy to get started. However a
     </item>
     
     <item>
-      <title>Docker azure pipeline build agent</title>
-      <link>https://svaus.github.io/posts/dockerazpbuildagent/</link>
-      <pubDate>Sun, 10 May 2020 16:08:37 +1000</pubDate>
-      
-      <guid>https://svaus.github.io/posts/dockerazpbuildagent/</guid>
-      <description>Creating a docker build agent for azure pipeline is very easy. There are few simple steps. We will be using chocoletey to create this agent.
-Overall flow : graph TD A(&#34;Build Docker Image&#34;) A--B(&#34;Push image Azure Container Registry&#34;) B--C(&#34;Pull from Azure Container Registry&#34;) C--D(&#34;Create Docker container instance&#34;) D--E(&#34;Registers with Azure DevOps organisation&#34;) style A fill:#8451a1,stroke:#333,stroke-width:4px style B fill:#8451a1,stroke:#333,stroke-width:4px style C fill:#8451a1,stroke:#333,stroke-width:4px style D fill:#8451a1,stroke:#333,stroke-width:4px style E fill:#8451a1,stroke:#333,stroke-width:4px Firstly create a Dockerfile where we can provide docker instructions.</description>
-    </item>
-    
-    <item>
       <title>Job scheduler with dotnet core</title>
       <link>https://svaus.github.io/posts/jobschedulerwithdotnetcore/</link>
       <pubDate>Sun, 10 May 2020 15:54:26 +1000</pubDate>
