@@ -13,6 +13,16 @@
     
     
     <item>
+      <title>DI in right way using Autofac</title>
+      <link>https://svaus.github.io/posts/autofacbasics/</link>
+      <pubDate>Wed, 03 Jun 2020 22:33:25 +1000</pubDate>
+      
+      <guid>https://svaus.github.io/posts/autofacbasics/</guid>
+      <description>Coming soon&amp;hellip;
+As requested by my dear friends.</description>
+    </item>
+    
+    <item>
       <title>Browsers supported by blazor</title>
       <link>https://svaus.github.io/posts/blazor/browserssupportedbyblazor/</link>
       <pubDate>Wed, 03 Jun 2020 16:27:14 +1000</pubDate>
@@ -28,7 +38,7 @@
       
       <guid>https://svaus.github.io/posts/blazor/isblazorsecured/</guid>
       <description>In this blog we will discuss about Blazor Web Assembly security at high level. Is Blazor Web Assembly secured?
-Blazor allows Dlls to be downloaded to user browser. So user can get hold of the Dlls, decompile them and get source code from it. So at first go it might seem like a security issue, however it is not. We will discuss about it in detail, also few things or patterns that we need to be mindful when build application in Blazor.</description>
+Blazor allows Dlls to be downloaded to user&amp;rsquo;s browser. So user can get hold of the Dlls, decompile them and get source code from it. So at first go it might seem like a security issue, however it is not. We will discuss about it in detail, also few things or patterns that we need to be mindful when build application in Blazor.</description>
     </item>
     
     <item>

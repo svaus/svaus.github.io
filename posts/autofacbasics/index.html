@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Create Website in minutes with Hugo :: Blogs for dotnet, azure and devops</title>
+    <title>DI in right way using Autofac :: Blogs for dotnet, azure and devops</title>
 
     
     <link href="/css/nucleus.css?1591187746" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/posts/createwebsiteusinghugo/">
+  <body class="" data-url="/posts/autofacbasics/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -110,7 +110,7 @@
  
   
     
-      <li data-nav-id="/posts/autofacbasics/" title="DI in right way using Autofac" class="dd-item ">
+      <li data-nav-id="/posts/autofacbasics/" title="DI in right way using Autofac" class="dd-item active">
         <a href="/posts/autofacbasics/">
         DI in right way using Autofac
         <i class="fas fa-check read-icon"></i>
@@ -173,7 +173,7 @@
  
   
     
-      <li data-nav-id="/posts/createwebsiteusinghugo/" title="Create Website in minutes with Hugo" class="dd-item active">
+      <li data-nav-id="/posts/createwebsiteusinghugo/" title="Create Website in minutes with Hugo" class="dd-item ">
         <a href="/posts/createwebsiteusinghugo/">
         Create Website in minutes with Hugo
         <i class="fas fa-check read-icon"></i>
@@ -368,7 +368,7 @@
             
           
           
-            <a href='/'>Blogs for dotnet, azure and devops</a> > <a href='/posts/'>Posts</a> > Create Website in minutes with Hugo
+            <a href='/'>Blogs for dotnet, azure and devops</a> > <a href='/posts/'>Posts</a> > DI in right way using Autofac
           
         
           
@@ -381,18 +381,7 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents">
-  <ul>
-    <li><a href="#introduction">Introduction</a></li>
-    <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#tools-used">Tools used</a></li>
-    <li><a href="#install-hugo">Install Hugo</a></li>
-    <li><a href="#create-website">Create Website</a></li>
-    <li><a href="#apply-theme">Apply theme</a></li>
-    <li><a href="#publish-website">Publish website</a></li>
-    <li><a href="#conclusion">Conclusion</a></li>
-  </ul>
-</nav>
+<nav id="TableOfContents"></nav>
     </div>
 </div>
 
@@ -408,101 +397,15 @@
           
             <h1>
               
-              Create Website in minutes with Hugo
+              DI in right way using Autofac
             </h1>
           
 
         
 
 
-<p><img src="/mermaid-diagram-createyourwebsite.png" alt="image alt text"></p>
-<h2 id="introduction">Introduction</h2>
-<p>Creating a static website is very easy. There are many static site generators like Hugo, jKeyll, NextJS, etc. In this blog post we will discuss about Hugo.</p>
-<p>Hugo is very popular static website generator. It allows you to create a static site in matter of minutes. Once we create this site, we need to host it some where. Hang on thats going to cost money. Naah!! Here comes GitHub Pages. It allows you to host static website for free.</p>
-<p>So let us dive in and get a website created in minutes.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<ol>
-<li>Install Git in local</li>
-<li>GitHub login</li>
-</ol>
-<h2 id="tools-used">Tools used</h2>
-<ol>
-<li>VS Code or any other editor</li>
-<li>Hugo</li>
-</ol>
-<h2 id="install-hugo">Install Hugo</h2>
-<p>Installing Hugo is very easy. Below link has steps for installation.
-<a href="https://gohugo.io/getting-started/installing/">https://gohugo.io/getting-started/installing/</a></p>
-<p>If on windows go to below link and download the zip file. Once the zip file is extracted, you will find an executable file. Double click on it to install it in local system.</p>
-<p><a href="https://github.com/gohugoio/hugo/releases/download/v0.71.1/hugo_0.71.1_Windows-64bit.zip">https://github.com/gohugoio/hugo/releases/download/v0.71.1/hugo_0.71.1_Windows-64bit.zip</a></p>
-<p><a href="https://github.com/gohugoio/hugo/releases/download/v0.71.1/hugo_extended_0.71.1_Windows-64bit.zip">https://github.com/gohugoio/hugo/releases/download/v0.71.1/hugo_extended_0.71.1_Windows-64bit.zip</a></p>
-<h2 id="create-website">Create Website</h2>
-<p>Create a folder which will have your website content. To create a website just enter below command in the VS Code terminal. If Hugo is installed correctly it will create a website.</p>
-<pre><code>hugo new site {yourwebsitename}
-</code></pre><p>Add content as below</p>
-<pre><code>hugo new introduction.md
-</code></pre><p>To see the website in local machine use below command</p>
-<pre><code>hugo serve -D
-</code></pre><p>This will convert all markdown content to HTML pages and publish to http://localhost:1313. Browse to this URL in local and you will see your website.</p>
-<p>Congratulation! you have built a basic website. But this is still not enough as it doesn&rsquo;t look professional. So let us make this website more professional by applying theme.</p>
-<h2 id="apply-theme">Apply theme</h2>
-<p>Hugo has a range of existing themes. All the themes are listed at below website.</p>
-<p><a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a></p>
-<p>Pick any theme that you like. I am going to pick below theme.</p>
-<p><a href="https://github.com/luizdepra/hugo-coder.git">https://github.com/luizdepra/hugo-coder.git</a></p>
-<p>Locate a <code>themes</code> folder in the directory and clone the theme. If you don&rsquo;t know how to clone, just download it and create a folder under themes call it as <code>mytheme</code>.</p>
-<p>In order for the theme to reflect, go to <code>config.toml</code> file and change below configuration :</p>
-<pre><code>theme = &quot;mytheme&quot;
-</code></pre><p>Apply basic configuration by copying content of config.toml from examplesite in the theme folder to your root config.toml file. Make appropiate changes.</p>
-<p>Run the site again and you should see new theme applied.</p>
-<h2 id="publish-website">Publish website</h2>
-<p>This step is really interesting. We will be using GitHub Pages for hosting the website. GitHub Pages is free for static websites. You can also use netlify or AWS or Azure or any other platform of your choice to host the website.</p>
-<ol>
-<li>Create a repository on GitHub. Set the name of the repository to {githubusername.github.io}.</li>
-</ol>
-<p><img src="/CreateNewGitHubRepo.PNG" alt="image alt text"></p>
-<p><img src="/SetGitHubPagesSetting.PNG" alt="image alt text"></p>
-<ol start="2">
-<li>Final step is to push the changes. Run below command</li>
-</ol>
-<pre><code>hugo
-</code></pre><p>This command will generate bunch of files in a folder called <strong>public</strong>. We need to push this folder to repository that we created.</p>
-<pre><code>cd public
-git clone 'githubrepo.github.io'
-git add .
-git commit -m &quot;Publishing my new website&quot;
-git push origin master
-</code></pre><p>This is the most complex part, if you can do this few command (if you are a developer its easy, if not then might take couple more minutes), you will get your website.</p>
-<p><a href="https://githubusername.github.io">https://githubusername.github.io</a></p>
-<p>Waw!!! All done.</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>As you can see it is very easy to create a website of your own using Hugo. We used GitHub Pages to host it which is free of cost.</p>
-<p>Enjoy!!!</p>
-
-<div class="mermaid" align="center">
-
-graph LR
-  A("Introduction")
-  A-->B("Prerequisites")
-  B-->C("Tools")
-  C-->D("Install Hugo")
-  D-->E("Create Website")
-  E-->F("Apply theme")
-  F-->G("Publish website")
-  G-->H("Conclusion")
-
-  classDef flowstyle fill:#8451a1,stroke:#333,stroke-width:4px,font:20px;
-
-  style A fill:#8451a1,stroke:#333,stroke-width:4px,font:40px
-  style B fill:#8451a1,stroke:#333,stroke-width:4px
-  style C fill:#8451a1,stroke:#333,stroke-width:4px
-  style D fill:#8451a1,stroke:#333,stroke-width:4px
-  style E fill:#8451a1,stroke:#333,stroke-width:4px
-  style F fill:#8451a1,stroke:#333,stroke-width:4px
-  style G fill:#8451a1,stroke:#333,stroke-width:4px
-  style H fill:#8451a1,stroke:#333,stroke-width:4px
-</div>
-
+<p>Coming soon&hellip;</p>
+<p>As requested by my dear friends.</p>
 
 
 <footer class="footline">
@@ -554,6 +457,23 @@ graph LR
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -604,26 +524,6 @@ graph LR
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -712,10 +612,10 @@ graph LR
 	 
 	 
 		
-			<a class="nav nav-prev" href="/posts/blazor/isblazorsecured/" title="Is Blazor Web Assembly secured?"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/posts/" title="Posts"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/posts/blazor/introductiontoblazor/" title="Introduction to Blazor" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/posts/blazor/browserssupportedbyblazor/" title="Browsers supported by blazor" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
