@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://svaus.github.io/posts/createwebsiteusinghugo/</loc>
-    <lastmod>2020-05-31T11:04:26+10:00</lastmod>
+    <loc>https://svaus.github.io/posts/blazor/browserssupportedbyblazor/</loc>
+    <lastmod>2020-06-03T16:27:14+10:00</lastmod>
   </url>
   
   <url>
     <loc>https://svaus.github.io/posts/</loc>
+    <lastmod>2020-06-03T16:27:14+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://svaus.github.io/posts/blazor/isblazorsecured/</loc>
+    <lastmod>2020-06-03T16:25:23+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://svaus.github.io/posts/createwebsiteusinghugo/</loc>
     <lastmod>2020-05-31T11:04:26+10:00</lastmod>
   </url>
   
