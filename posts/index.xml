@@ -22,12 +22,13 @@
     </item>
     
     <item>
-      <title>Is Blazor Web Assembly secured</title>
+      <title>Is Blazor Web Assembly secured?</title>
       <link>https://svaus.github.io/posts/blazor/isblazorsecured/</link>
       <pubDate>Wed, 03 Jun 2020 16:25:23 +1000</pubDate>
       
       <guid>https://svaus.github.io/posts/blazor/isblazorsecured/</guid>
-      <description>Coming soon&amp;hellip;</description>
+      <description>In this blog we will discuss about Blazor Web Assembly security at high level. Is Blazor Web Assembly secured?
+Blazor allows Dlls to be downloaded to user browser. So user can get hold of the Dlls, decompile them and get source code from it. So at first go it might seem like a security issue, however it is not. We will discuss about it in detail, also few things or patterns that we need to be mindful when build application in Blazor.</description>
     </item>
     
     <item>

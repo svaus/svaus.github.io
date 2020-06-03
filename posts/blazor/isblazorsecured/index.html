@@ -9,22 +9,22 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Is Blazor Web Assembly secured :: Blogs for dotnet, azure and devops</title>
+    <title>Is Blazor Web Assembly secured? :: Blogs for dotnet, azure and devops</title>
 
     
-    <link href="/css/nucleus.css?1591165733" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1591165733" rel="stylesheet">
-    <link href="/css/hybrid.css?1591165733" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1591165733" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1591165733" rel="stylesheet">
-    <link href="/css/auto-complete.css?1591165733" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1591165733" rel="stylesheet">
-    <link href="/css/theme.css?1591165733" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1591165733" rel="stylesheet">
+    <link href="/css/nucleus.css?1591178783" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1591178783" rel="stylesheet">
+    <link href="/css/hybrid.css?1591178783" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1591178783" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1591178783" rel="stylesheet">
+    <link href="/css/auto-complete.css?1591178783" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1591178783" rel="stylesheet">
+    <link href="/css/theme.css?1591178783" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1591178783" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1591165733"></script>
+    <script src="/js/jquery-3.3.1.min.js?1591178783"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -56,14 +56,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1591165733"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1591165733"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1591178783"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1591178783"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/svaus.github.io\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1591165733"></script>
+<script type="text/javascript" src="/js/search.js?1591178783"></script>
 
     
   </div>
@@ -131,9 +131,9 @@
  
   
     
-      <li data-nav-id="/posts/blazor/isblazorsecured/" title="Is Blazor Web Assembly secured" class="dd-item active">
+      <li data-nav-id="/posts/blazor/isblazorsecured/" title="Is Blazor Web Assembly secured?" class="dd-item active">
         <a href="/posts/blazor/isblazorsecured/">
-        Is Blazor Web Assembly secured
+        Is Blazor Web Assembly secured?
         <i class="fas fa-check read-icon"></i>
         </a>
     </li>
@@ -347,7 +347,7 @@
             
           
           
-            <a href='/'>Blogs for dotnet, azure and devops</a> > <a href='/posts/'>Posts</a> > Is Blazor Web Assembly secured
+            <a href='/'>Blogs for dotnet, azure and devops</a> > <a href='/posts/'>Posts</a> > Is Blazor Web Assembly secured?
           
         
           
@@ -360,7 +360,12 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li><a href="#reverse-engineer-spa-from-javascript">Reverse Engineer SPA from JavaScript</a></li>
+    <li><a href="#reverse-engineer-blazor-spa-from-dlls">Reverse Engineer Blazor SPA from Dlls</a></li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -376,14 +381,19 @@
           
             <h1>
               
-              Is Blazor Web Assembly secured
+              Is Blazor Web Assembly secured?
             </h1>
           
 
         
 
 
-<p>Coming soon&hellip;</p>
+<p>In this blog we will discuss about Blazor Web Assembly security at high level. Is Blazor Web Assembly secured?</p>
+<p>Blazor allows Dlls to be downloaded to user browser. So user can get hold of the Dlls, decompile them and get source code from it. So at first go it might seem like a security issue, however it is not. We will discuss about it in detail, also few things or patterns that we need to be mindful when build application in Blazor.</p>
+<h2 id="reverse-engineer-spa-from-javascript">Reverse Engineer SPA from JavaScript</h2>
+<p>We have been using Angular, React and Vue JavaScript for long. These SPA frameworks and many other ones get compiled into JavaScript file and may be ugilified and minified. When user access this application JavaScript files are downloaded by user and they can get hold of the source code.</p>
+<p>So it is possible to reverse engineer the application from JavaScript. Ofcourse it needs knowledge of JavaScript and the framework, but it is definitely possible.</p>
+<h2 id="reverse-engineer-blazor-spa-from-dlls">Reverse Engineer Blazor SPA from Dlls</h2>
 
 
 <footer class="footline">
@@ -590,19 +600,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1591165733"></script>
-    <script src="/js/perfect-scrollbar.min.js?1591165733"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1591165733"></script>
-    <script src="/js/jquery.sticky.js?1591165733"></script>
-    <script src="/js/featherlight.min.js?1591165733"></script>
-    <script src="/js/highlight.pack.js?1591165733"></script>
+    <script src="/js/clipboard.min.js?1591178783"></script>
+    <script src="/js/perfect-scrollbar.min.js?1591178783"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1591178783"></script>
+    <script src="/js/jquery.sticky.js?1591178783"></script>
+    <script src="/js/featherlight.min.js?1591178783"></script>
+    <script src="/js/highlight.pack.js?1591178783"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1591165733"></script>
-    <script src="/js/learn.js?1591165733"></script>
-    <script src="/js/hugo-learn.js?1591165733"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1591178783"></script>
+    <script src="/js/learn.js?1591178783"></script>
+    <script src="/js/hugo-learn.js?1591178783"></script>
 
-    <link href="/mermaid/mermaid.css?1591165733" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1591165733"></script>
+    <link href="/mermaid/mermaid.css?1591178783" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1591178783"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
